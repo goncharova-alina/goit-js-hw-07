@@ -19,15 +19,20 @@ const images = [
   const galleryRef = document.querySelector('#gallery');
 
   images.forEach(element => {
-    const listRef = document.createElement('li');
+    const itemRef = document.createElement('li');
     const imageRef = document.createElement('img');
 
     imageRef.src = element.url;
     imageRef.alt = element.alt;
 
+    imageRef.classList.add('img');
+    galleryRef.classList.add('gallery');
+    itemRef.classList.add('gallery-item');
+
     imageRef.insertAdjacentHTML('afterbegin', element);
-    galleryRef.append(listRef);
-    listRef.append(imageRef);
+
+    galleryRef.append(itemRef);
+    itemRef.append(imageRef);
     console.log(element); 
 
   })
