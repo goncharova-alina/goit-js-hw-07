@@ -1,10 +1,19 @@
+const inputRef = document.querySelector('#validation-input');
+// console.log(inputRef)
+const dataLength = Number(inputRef.dataset.length);
 
+inputRef.addEventListener('blur', () => {
+    inputRef.classList.add('invalid');
+    if(inputRef.value.length === dataLength) {
+        inputRef.classList.add('valid');
+        inputRef.classList.remove("invalid");
 
+    } else if (inputRef.value.length === 0) {
 
-/*подсказка из чата:
-параметр input : valueAsNumber
-вашSelectorSpan.style.fontSize = `${значение переменной}px`
-вашSelectorInput.valueAsNumber*/
+    inputRef.classList.remove('valid');
+    inputRef.classList.remove('invalid');
+    }   
+})
 
 
 
