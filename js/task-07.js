@@ -16,7 +16,3 @@ inputRef.addEventListener('input', () => {
 // инлайн-стиль span#text обновляя свойство font-size. 
 // В результате при перетаскивании ползунка будет меняться размер текста.
 
-/*подсказка из чата:
-параметр input : valueAsNumber
-вашSelectorSpan.style.fontSize = `${значение переменной}px`
-вашSelectorInput.valueAsNumber*/
